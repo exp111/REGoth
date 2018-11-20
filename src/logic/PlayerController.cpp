@@ -3,9 +3,9 @@
 //
 
 #include "PlayerController.h"
+#include "CameraController.h"
 #include "ItemController.h"
 #include "MobController.h"
-#include "CameraController.h"
 #include <json.hpp>
 #include <stdlib.h>
 #include "visuals/ModelVisual.h"
@@ -326,9 +326,10 @@ Daedalus::GameState::ItemHandle PlayerController::drawWeaponMelee(bool forceFist
                 m_EquipmentState.weaponMode = EWeaponMode::Weapon2h;
                 break;
 
-            default:
+                default:
                 // Not a melee weapon?
-                m_EquipmentState.weaponMode = EWeaponMode::WeaponNone;
+                //m_EquipmentState.weaponMode = EWeaponMode::WeaponNone;
+				m_EquipmentState.weaponMode = EWeaponMode::WeaponFist;
                 break;
         }
     }
